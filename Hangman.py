@@ -9,4 +9,3 @@ def get_word(word_lst):
 
 def play(word):
     word_completion = '_' * len(word)
-    
