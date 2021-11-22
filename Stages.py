@@ -1,0 +1,61 @@
+import turtle as t
+from time import sleep
+
+
+def stages(tries):
+    if tries == 1:
+        t.circle(50)
+        t.right(45)
+        t.forward(150)
+        t.backward(150)
+        t.right(90)
+        t.forward(150)
+        t.backward(150)
+        t.left(45)
+        t.forward(200)
+        t.right(45)
+        t.forward(100)
+        t.backward(100)
+        t.left(90)
+        t.forward(100)
+        sleep(1)
+    elif tries == 2:
+        t.circle(50)
+        t.right(45)
+        t.forward(150)
+        t.backward(150)
+        t.right(90)
+        t.forward(150)
+        t.backward(150)
+        t.left(45)
+        t.forward(200)
+        t.right(45)
+        t.forward(100)
+        sleep(1)
+    elif tries == 3:
+        t.circle(50)
+        t.right(45)
+        t.forward(150)
+        t.backward(150)
+        t.right(90)
+        t.forward(150)
+        t.backward(150)
+        t.left(45)
+        t.forward(200)
+        sleep(1)
+    elif tries == 4:
+        t.circle(50)
+        t.right(45)
+        t.forward(150)
+        t.backward(150)
+        t.right(45)
+        t.forward(150)
+        sleep(1)
+    elif tries == 5:
+        t.circle(50)
+        t.right(90)
+        t.forward(150)
+        sleep(1)
+    elif tries == 6:
+        t.circle(50)
+        sleep(1)
