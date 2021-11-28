@@ -3,6 +3,8 @@ from time import sleep
 
 
 def stages(tries):
+    window = t.Screen()
+    window.bgcolor("red")
     if tries == 1:
         t.circle(50)
         t.right(45)
