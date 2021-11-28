@@ -34,10 +34,9 @@ def EndofTurn():
 
 
 def main():
+    global tries
 
     is_running = True
-
-    global tries
 
     print(f"You have {tries} tries.")
     print("You can guess a letter or a word.")
