@@ -1,0 +1,15 @@
+cat
+dog
+sheep
+cow
+pig
+bat
+rat
+whale
+cheetah
+tiger
+lion
+elephant
+giraffe
+zebra
+horse
