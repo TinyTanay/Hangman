@@ -2,23 +2,69 @@ from random import choice
 from Stages import stages
 from time import sleep
 import turtle
+import sys
 
 
 guessed_letters = []
 
 guessed_words = []
 
-word_lst = ['opal', 'time', 'jobs', 'frog']
-
-word = choice(word_lst)
-
 tries = 6
-
-word_completion = len(word) * '_'
 
 word_complete = False
 
 tries_gone = False
+
+
+def SetScreen():
+    stages(100)
+    print("Hello! This will be your screen throughout the game")
+    sleep(1)
+    print("Please position it to a suitable area then wait for the game to begin")
+    sleep(5)
+
+
+def GetWord():
+    global word
+
+    categories = ["fruits and vegetables", "countries", "animals"]
+
+    print("First you need to choose the category your word will be!")
+    sleep(1)
+    print("The catergories are:")
+    for idx, cat in enumerate(categories):
+        print(f"{cat}: {idx + 1}")
+        sleep(0.5)
+
+    category = int(input("What category would you like to choose? (1 - 3) "))
+
+    if category == 1:
+        with open("WordCategories/fruits_vegetables.txt", "r") as f:
+            words = f.read()
+            word_lst = words.split("\n")
+    elif category == 2:
+        with open("WordCategories/countries.txt", "r") as c:
+            words = c.read()
+            word_lst = words.split("\n")
+    elif category == 3:
+        with open("WordCategories/animals.txt", "r") as a:
+            words = a.read()
+            word_lst = words.split("\n")
+    else:
+        print("Please enter a valid number")
+        sys.exit()
+
+    word = choice(word_lst)
+
+    print(f"Your word is {len(word)} characters long")
+
+    sleep(1)
+
+    return word
+
+
+GetWord()
+word_completion = len(word) * '_'
 
 
 def ReplaceChar(letter_guess, word=word):
@@ -39,20 +85,23 @@ def ReplaceWord(word_guess, word=word):
 
 
 def EndofTurn():
-    print(f"You have >> {tries} << tries left!")
+    if tries > 0:
+        print(f"You have >> {tries} << tries left!")
     sleep(0.75)
     print(word_completion)
-    sleep(0.75)
+    sleep(1.1)
     stages(tries)
     print(f"You have guessed the letters: {', '.join(guessed_letters)}")
 
 
 def CheckGameOver():
+    global tries
     global word_complete
     global tries_gone
 
     if '_' not in word_completion:
         word_complete = True
+        tries = 0
 
     if tries < 1:
         tries_gone = True
@@ -68,8 +117,11 @@ def Lost():
 
 def Rules():
     print(f"You have {tries} tries.")
+    sleep(0.5)
     print("You can guess a letter or a word.")
+    sleep(0.5)
     print("Each time you guess wrong, the hangman will be drawn further.")
+    sleep(1)
     print("It starts with:")
     for i in range(3):
         print(". . .")
@@ -86,6 +138,8 @@ def main():
     global word_completion
 
     is_running = True
+
+    SetScreen()
 
     Rules()
 
@@ -113,6 +167,7 @@ def main():
                 if letter_guess in word:
                     print("Correct!")
                     ReplaceChar(letter_guess)
+                    CheckGameOver()
                     EndofTurn()
                     continue
 
@@ -137,6 +192,7 @@ def main():
                 if word_guess == word:
                     print("Correct")
                     ReplaceWord(word_guess)
+                    CheckGameOver()
                     EndofTurn()
                     continue
 
@@ -153,8 +209,8 @@ def main():
             'Enter a valid form (l for letter or w for word)!'
             continue
 
-    turtle.bye()
-
 
 if __name__ == '__main__':
     main()
+
+turtle.done()
