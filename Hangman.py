@@ -20,7 +20,7 @@ def SetScreen():
     stages(100)
     print("Hello! This will be your screen throughout the game")
     sleep(1)
-    print("Please position it to a suitable area then wait for the game to begin")
+    print("Please wait for the game to begin")
     sleep(5)
 
 
@@ -85,7 +85,9 @@ def ReplaceWord(word_guess, word=word):
 
 
 def EndofTurn():
-    if tries > 0:
+    if tries == 1:
+        print(f"You have >> {tries} << try left!")
+    elif tries > 1:
         print(f"You have >> {tries} << tries left!")
     sleep(0.75)
     print(word_completion)
@@ -125,7 +127,7 @@ def Rules():
     print("It starts with:")
     for i in range(3):
         print(". . .")
-        sleep(0.5)
+        sleep(0.1)
     stages(tries)
     print(f"on {tries} tries")
     sleep(1)
@@ -168,6 +170,15 @@ def main():
                     print("Correct!")
                     ReplaceChar(letter_guess)
                     CheckGameOver()
+
+                    if word_complete:
+                        Won()
+                        break
+
+                    if tries_gone:
+                        Lost()
+                        break
+
                     EndofTurn()
                     continue
 
@@ -190,9 +201,16 @@ def main():
                 guessed_words.append(word_guess)
 
                 if word_guess == word:
-                    print("Correct")
+                    print("Correct!")
                     ReplaceWord(word_guess)
                     CheckGameOver()
+                    if word_complete:
+                        Won()
+                        break
+
+                    if tries_gone:
+                        Lost()
+                        break
                     EndofTurn()
                     continue
 

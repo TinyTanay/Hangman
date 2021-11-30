@@ -1,15 +1,22 @@
 from time import sleep
 import turtle
 
+def ResetPosition():
+    turtle.penup()
+    turtle.goto(0, 100)
+    turtle.pendown()
 
 def stages(tries):
     window = turtle.Screen()
     window.bgpic("turtle_background.png")
-    window.setup(width=800, height=600, startx=1100, starty=0)
+    window.setup(width=600, height=600, startx=-1, starty=-1)
+    window.cv._rootwindow.resizable(False, False)
+    window.cv._rootwindow.attributes("-topmost", True)
     turtle.pensize(15)
     if tries == 1:
         turtle.clear()
         global running
+        ResetPosition()
         turtle.circle(50)
         turtle.right(45)
         turtle.forward(150)
@@ -29,6 +36,7 @@ def stages(tries):
     elif tries == 2:
         turtle.clear()
         global running
+        ResetPosition()
         turtle.circle(50)
         turtle.right(45)
         turtle.forward(150)
@@ -45,6 +53,7 @@ def stages(tries):
     elif tries == 3:
         turtle.clear()
         global running
+        ResetPosition()
         turtle.circle(50)
         turtle.right(45)
         turtle.forward(150)
@@ -59,6 +68,7 @@ def stages(tries):
     elif tries == 4:
         turtle.clear()
         global running
+        ResetPosition()
         turtle.circle(50)
         turtle.right(45)
         turtle.forward(150)
@@ -70,6 +80,7 @@ def stages(tries):
     elif tries == 5:
         turtle.clear()
         global running
+        ResetPosition()
         turtle.circle(50)
         turtle.right(90)
         turtle.forward(150)
@@ -78,12 +89,14 @@ def stages(tries):
     elif tries == 6:
         turtle.clear()
         global running
+        ResetPosition()
         turtle.circle(50)
         sleep(5)
         turtle.reset()
     elif tries == 100:
         turtle.clear()
         global running
-        style = ('Courier', 30, 'italic')
-        turtle.write('POSITION THIS', font=style, align='center')
+        ResetPosition()
+        style = ('Courier', 20, 'italic')
+        turtle.write('HANGMAN!', font=style, align='center')
         turtle.reset()
