@@ -23,3 +23,5 @@ chad
 hungary
 bahamas
 turkey
+vietnam
+singapore
