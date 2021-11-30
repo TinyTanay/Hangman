@@ -111,10 +111,14 @@ def CheckGameOver():
 
 def Won():
     print(f"Yay you guessed the word: {word}!!")
+    sleep(2)
+    sys.exit()
 
 
 def Lost():
     print(f"Oh no you lost :( The word was {word} by the way.")
+    sleep(2)
+    sys.exit()
 
 
 def Rules():
