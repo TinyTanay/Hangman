@@ -13,3 +13,13 @@ elephant
 giraffe
 zebra
 horse
+rabbit
+shark
+snake
+lizard
+gazelle
+deer
+echidna
+possum
+cicada
+worm
