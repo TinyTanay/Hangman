@@ -42,6 +42,7 @@ def GetWord():
         with open("WordCategories/fruits_vegetables.txt", "r") as f:
             words = f.read()
             word_lst = words.split("\n")
+            del word_lst[-1]
     elif category == 2:
         with open("WordCategories/countries.txt", "r") as c:
             words = c.read()
