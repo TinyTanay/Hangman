@@ -21,7 +21,7 @@ def SetScreen():
     print("Hello! This will be your screen throughout the game")
     sleep(1)
     print("Please wait for the game to begin")
-    sleep(5)
+    sleep(2)
 
 
 def GetWord():
@@ -91,7 +91,7 @@ def EndofTurn():
         print(f"You have >> {tries} << tries left!")
     sleep(0.75)
     print(word_completion)
-    sleep(1.1)
+    sleep(0.5)
     stages(tries)
     print(f"You have guessed the letters: {', '.join(guessed_letters)}")
 
@@ -119,19 +119,12 @@ def Lost():
 
 def Rules():
     print(f"You have {tries} tries.")
-    sleep(0.5)
+    sleep(1)
     print("You can guess a letter or a word.")
-    sleep(0.5)
+    sleep(1)
     print("Each time you guess wrong, the hangman will be drawn further.")
     sleep(1)
-    print("It starts with:")
-    for i in range(3):
-        print(". . .")
-        sleep(0.1)
-    stages(tries)
-    print(f"on {tries} tries")
-    sleep(1)
-    print(f"Once all {tries} tries are gone, you lose.")
+    print(f"Once all {tries} tries are gone, the hangman is completed and you LOSE!")
 
 
 def main():

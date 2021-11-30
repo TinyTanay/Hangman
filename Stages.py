@@ -1,10 +1,12 @@
 from time import sleep
 import turtle
 
+
 def ResetPosition():
     turtle.penup()
     turtle.goto(0, 100)
     turtle.pendown()
+
 
 def stages(tries):
     window = turtle.Screen()
@@ -13,7 +15,7 @@ def stages(tries):
     window.cv._rootwindow.resizable(False, False)
     window.cv._rootwindow.attributes("-topmost", True)
     turtle.pensize(15)
-    if tries == 1:
+    if tries == 0:
         turtle.clear()
         global running
         ResetPosition()
@@ -31,9 +33,9 @@ def stages(tries):
         turtle.backward(100)
         turtle.left(90)
         turtle.forward(100)
-        sleep(5)
+        sleep(2)
         turtle.reset()
-    elif tries == 2:
+    elif tries == 1:
         turtle.clear()
         global running
         ResetPosition()
@@ -48,9 +50,9 @@ def stages(tries):
         turtle.forward(200)
         turtle.right(45)
         turtle.forward(100)
-        sleep(5)
+        sleep(2)
         turtle.reset()
-    elif tries == 3:
+    elif tries == 2:
         turtle.clear()
         global running
         ResetPosition()
@@ -63,9 +65,9 @@ def stages(tries):
         turtle.backward(150)
         turtle.left(45)
         turtle.forward(200)
-        sleep(5)
+        sleep(2)
         turtle.reset()
-    elif tries == 4:
+    elif tries == 3:
         turtle.clear()
         global running
         ResetPosition()
@@ -75,23 +77,23 @@ def stages(tries):
         turtle.backward(150)
         turtle.right(45)
         turtle.forward(150)
-        sleep(5)
+        sleep(2)
         turtle.reset()
-    elif tries == 5:
+    elif tries == 4:
         turtle.clear()
         global running
         ResetPosition()
         turtle.circle(50)
         turtle.right(90)
         turtle.forward(150)
-        sleep(5)
+        sleep(2)
         turtle.reset()
-    elif tries == 6:
+    elif tries == 5:
         turtle.clear()
         global running
         ResetPosition()
         turtle.circle(50)
-        sleep(5)
+        sleep(2)
         turtle.reset()
     elif tries == 100:
         turtle.clear()
