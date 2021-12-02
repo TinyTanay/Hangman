@@ -27,7 +27,7 @@ def SetScreen():
 def GetWord():
     global word
 
-    categories = ["fruits and vegetables", "countries", "animals"]
+    categories = ["fruits and vegetables", "countries", "animals", "extended countries"]
 
     print("First you need to choose the category your word will be!")
     sleep(1)
@@ -36,21 +36,33 @@ def GetWord():
         print(f"{cat}: {idx + 1}")
         sleep(0.5)
 
-    category = int(input("What category would you like to choose? (1 - 3) "))
+    category = int(input("What category would you like to choose? (1 - 4) "))
 
     if category == 1:
         with open("WordCategories/fruits_vegetables.txt", "r") as f:
             words = f.read()
             word_lst = words.split("\n")
             del word_lst[-1]
+
     elif category == 2:
         with open("WordCategories/countries.txt", "r") as c:
             words = c.read()
             word_lst = words.split("\n")
+            del word_lst[-1]
+
     elif category == 3:
         with open("WordCategories/animals.txt", "r") as a:
             words = a.read()
             word_lst = words.split("\n")
+            del word_lst[-1]
+
+    elif category == 4:
+        with open("WordCategories/countries_extended.txt", "r") as a:
+            words = a.read()
+            word_list = words.split("\n")
+            word_lst = [x.lower() for x in word_list]
+            del word_lst[-1]
+
     else:
         print("Please enter a valid number")
         sys.exit()
