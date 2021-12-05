@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cee52cae-a256-48af-bdd0-a66787108f67" name="Changes" comment=".">
+    <list default="true" id="cee52cae-a256-48af-bdd0-a66787108f67" name="Changes" comment="Made it so the category chosen is reaffirmed.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Hangman.py" beforeDir="false" afterPath="$PROJECT_DIR$/Hangman.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +37,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -53,7 +52,8 @@
       <workItem from="1638682208235" duration="443000" />
       <workItem from="1638682671366" duration="278000" />
       <workItem from="1638682967006" duration="536000" />
-      <workItem from="1638690962524" duration="279000" />
+      <workItem from="1638690962524" duration="415000" />
+      <workItem from="1638691397998" duration="173000" />
     </task>
     <task id="LOCAL-00001" summary="Update README">
       <created>1638616499946</created>
@@ -76,7 +76,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638682758223</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Made it so the category chosen is reaffirmed.">
+      <created>1638691288699</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1638691288699</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,6 +104,7 @@
     <MESSAGE value="Update README" />
     <MESSAGE value="Made the previously drawn lines (somewhat) instantaneous so that the drawings are less annoying." />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="Made it so the category chosen is reaffirmed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Made it so the category chosen is reaffirmed." />
   </component>
 </project>
