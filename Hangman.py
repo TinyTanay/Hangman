@@ -67,6 +67,8 @@ def GetWord():
         print("Please enter a valid number")
         sys.exit()
 
+    print(f"You have chosen {categories[category]}!")
+
     word = choice(word_lst)
 
     print(f"Your word is {len(word)} characters long")
