@@ -36,7 +36,7 @@ def stages(tries):
         turtle.backward(100)
         turtle.left(90)
         turtle.forward(100)
-        sleep(2)
+        sleep(1)
         turtle.reset()
     elif tries == 1:
         turtle.clear()
@@ -56,7 +56,7 @@ def stages(tries):
         turtle.tracer(1)
         turtle.right(45)
         turtle.forward(100)
-        sleep(2)
+        sleep(1)
         turtle.reset()
     elif tries == 2:
         turtle.clear()
@@ -74,7 +74,7 @@ def stages(tries):
         turtle.backward(150)
         turtle.left(45)
         turtle.forward(200)
-        sleep(2)
+        sleep(1)
         turtle.reset()
     elif tries == 3:
         turtle.clear()
@@ -89,7 +89,7 @@ def stages(tries):
         turtle.backward(150)
         turtle.right(45)
         turtle.forward(150)
-        sleep(2)
+        sleep(1)
         turtle.reset()
     elif tries == 4:
         turtle.clear()
@@ -101,14 +101,14 @@ def stages(tries):
         turtle.tracer(1)
         turtle.right(90)
         turtle.forward(150)
-        sleep(2)
+        sleep(1)
         turtle.reset()
     elif tries == 5:
         turtle.clear()
         global running
         ResetPosition()
         turtle.circle(50)
-        sleep(2)
+        sleep(1)
         turtle.reset()
     elif tries == 100:
         turtle.clear()
