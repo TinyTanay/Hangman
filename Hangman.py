@@ -33,7 +33,7 @@ def GetWord():
     sleep(1)
     print("The catergories are:")
     for idx, cat in enumerate(categories):
-        print(f"{cat}: {idx + 1}")
+        print(f"{cat}: {int(idx) + 1}")
         sleep(0.5)
 
     category = int(input("What category would you like to choose? (1 - 4) "))
@@ -67,7 +67,7 @@ def GetWord():
         print("Please enter a valid number")
         sys.exit()
 
-    print(f"You have chosen {categories[category]}!")
+    print(f"You have chosen {categories[category - 1]}!")
 
     word = choice(word_lst)
 
